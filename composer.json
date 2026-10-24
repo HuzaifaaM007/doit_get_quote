@@ -20,7 +20,8 @@
         "johnbillion/extended-cpts": "~4.5.0",
         "micropackage/requirements": "^1.0",
         "wpbp/debug": "~1.1.0",
-        "wpbp/template": "~1.0.0"
+        "wpbp/template": "~1.0.0",
+        "mpdf/mpdf": "^8.3"
     },
     "require-dev": {
         "codeatcode/codeatcs": "^1.0",
