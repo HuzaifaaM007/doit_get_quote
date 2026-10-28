@@ -1,0 +1,25 @@
+<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #ffffff;">
+        <h2 style="color: #2c3e50; border-bottom: 2px solid #007cba; padding-bottom: 10px; margin-top: 0;">New Quote Request Received</h2>
+        <p style="color: #555555; font-size: 15px; line-height: 1.5;">A customer has requested a quote for a product. Here are the details:</p>
+        
+        <div style="background-color: #f9f9f9; padding: 15px; border-radius: 5px; margin-bottom: 20px;">
+            <p style="margin: 5px 0; color: #333;"><strong style="color: #2c3e50;">Customer Name:</strong> {name}</p>
+            <p style="margin: 5px 0; color: #333;"><strong style="color: #2c3e50;">Customer Email:</strong> <a href="mailto:{email}" style="color: #007cba; text-decoration: none;">{email}</a></p>
+            <p style="margin: 5px 0; color: #333;"><strong style="color: #2c3e50;">Phone:</strong> {phone}</p>
+            <p style="margin: 5px 0; color: #333;"><strong style="color: #2c3e50;">Company:</strong> {company}</p>
+        </div>
+
+        <h3 style="color: #2c3e50; margin-bottom: 10px;">Requested Product</h3>
+        {product_details}
+
+        <h3 style="color: #2c3e50; margin-bottom: 10px;">Customer Message</h3>
+        <div style="background-color: #f4f4f4; padding: 12px; border-left: 4px solid #007cba; font-style: italic; color: #555;">
+            {message}
+        </div>
+
+        <p style="color: #777777; font-size: 13px; margin-top: 25px; line-height: 1.4;">You can review and manage products from your admin dashboard using the links above.</p>
+        
+        <div style="border-top: 1px solid #eeeeee; padding-top: 15px; margin-top: 20px; color: #888888; font-size: 13px;">
+            Regards,<br><strong>{store_name}</strong>
+        </div>
+    </div>
