@@ -1,4 +1,148 @@
-/** Import the shared style */
-@import "custom_props";
+:root {
+	--doitgq-btn-radius: 4px;
+}
 
-// This stylesheet is used to style the public-facing components of the plugin.
+.doitgq-get-quote-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-basis: 100%;
+	width: 100%;
+	min-height: 40px;
+	margin: 10px 0 0;
+	padding: 8px 16px;
+	border-radius: var(--doitgq-btn-radius);
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.4;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	box-sizing: border-box;
+	clear: both;
+}
+
+.doitgq-popup-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 999999;
+	justify-content: center;
+	align-items: center;
+	overflow-y: auto;
+	box-sizing: border-box;
+
+	&:not([hidden]) {
+		display: flex;
+	}
+}
+
+.doitgq-popup-box {
+	position: relative;
+	width: 100%;
+	max-width: 500px;
+	max-height: 100%;
+	padding: 30px;
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+	overflow-y: auto;
+	box-sizing: border-box;
+
+	input[type="text"],
+	input[type="email"],
+	input[type="number"],
+	input[type="tel"],
+	input[type="url"],
+	input[type="password"],
+	input[type="date"],
+	input[type="time"],
+	select,
+	textarea {
+		width: 100%;
+		padding: 10px;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		font-size: 14px;
+		box-sizing: border-box;
+	}
+
+	textarea {
+		resize: vertical;
+	}
+
+	label,
+	.doitgq-group-label {
+		font-weight: 600;
+		color: #333;
+	}
+
+	.doitgq-choice {
+		margin-right: 12px;
+		font-weight: normal;
+	}
+
+	p {
+		margin-bottom: 15px;
+	}
+
+	.button {
+		width: 100%;
+		padding: 12px;
+		font-size: 16px;
+
+		&:disabled {
+			opacity: 0.6;
+			cursor: not-allowed;
+		}
+	}
+}
+
+.doitgq-close-popup {
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	font-size: 28px;
+	font-weight: bold;
+	line-height: 1;
+	color: #999;
+	cursor: pointer;
+
+	&:hover {
+		color: #333;
+	}
+}
+
+// Honeypot: out of sight for people.
+.doitgq-hp {
+	position: absolute;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+.doitgq-form-response {
+	margin-top: 10px;
+	font-weight: 600;
+
+	&.is-success {
+		color: #1a7f37;
+	}
+
+	&.is-error {
+		color: #b32d2e;
+	}
+}
+
+body.doitgq-popup-open {
+	overflow: hidden;
+}
