@@ -1,9 +1,41 @@
-/** Import the shared style */
-@import "custom_props";
+.doitgq-reply {
+	label { margin-right: 12px; }
+	.doitgq-items { max-width: 900px; }
+	.doitgq-qty,
+	.doitgq-disc,
+	.doitgq-small { width: 70px; }
+	.doitgq-price { width: 100px; }
+}
 
-// This stylesheet is used to style the admin of WordPress.
+.doitgq-form-preview {
+	max-width: 400px;
+	margin: 10px 0;
+	padding: 20px;
+	background: #f9f9f9;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	justify-content: center;
 
-// Dashboard
-#dashboard_right_now a.demo-count::before {
-	content: "\f115";
+	h3 { margin-top: 0; }
+	.doitgq-choice { margin-right: 12px; }
+}
+
+.doitgq-toggle-password { margin-left: 6px; }
+
+.doitgq-fields-table {
+	max-width: 1100px;
+	margin-bottom: 8px;
+
+	input[type="text"],
+	select { width: 100%; }
+	input[disabled] { background: #f0f0f1; }
+}
+
+.doitgq-forms-list { max-width: 800px; }
+
+.doitgq-editor-error {
+	max-width: 1100px;
+	padding: 8px 12px;
+	background: #fcf0f1;
+	border-left: 4px solid #d63638;
 }
